@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-.logocadastro{
-    margin: 0.5% auto 0 auto;
-    display: block;
-    height: 250px;
-    width: 15%;
-}
 
-.cadastro-forms{
-    margin: 3% auto auto auto;
-    width: 40%;
+.backgroundCadastro{
     background-color: lightgray;
 }
 
-.cadastro-box{
-    margin-left: 32%;
-    margin-bottom: 2%;
+.logocadastro{
+    margin: 5% auto 0 auto;
+    display: block;
+    height: 80%;
+    width: 80%;
 }
+
+.backgroundContainer{
+    margin-top: 2%;
+}
+
+.cadastro-forms{
+    margin-left: 1%;
+}
+
 
 .cadastrochecktext{
     font-family: Roboto;
@@ -42,24 +45,7 @@
 
 .inputfields{
     display: block;
-    flex-direction: row;
-    margin-bottom:16.1px;
-}
-
-.inputtextright{
-    display: inline-block;
-    justify-content: right;
-    margin-left: 20%;
-}
-
-.inputfielddivright{
-    display: inline-block;
-    justify-content: right;
-    margin-left: 5px;
-}
-
-.inputimg{
-    margin-left: 4.5%;
+    margin-bottom:4%;
 }
 
 .enviarcadastro{

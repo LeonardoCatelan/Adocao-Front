@@ -4,12 +4,14 @@ import templogo from './img/templogoheader.png'
 import Switch from '@mui/material/Switch'
 import { useState } from 'react';
 import axios from 'axios';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function Adocaoheader() {
 
-    
+const cadastroUrl = "http://localhost:3000/cadastro"
+
 const [tutor, setTutor] = useState(false)
 
 const [nome, setNome] = useState("")
@@ -18,6 +20,7 @@ const [senha, setSenha] = useState("")
 async function Login(e){
 
     e.preventDefault();
+
 
     var data = {
         "usuario" : nome,
@@ -54,30 +57,38 @@ function Autenticar(url, data){
 }
 
     return(
-        <div class="header-adocao">
-            <img class="logo" src={templogo}/>
-            <div class="header-right">
-                <form onSubmit={Login}>
-                <div class="switchBar">
-                    <p>Adotante</p>
-                    <Switch name="switchLogin" checked={tutor} onChange={e => setTutor(e.target.checked)} defaultChecked color="default"/>
-                    <p id="switchBarRight">Tutor</p>
-                </div>
-                    <label>
-                        <div class="inputText">
-                            <input class="login" type="text" name="name" onChange={e => setNome(e.target.value)}/>
-                        </div>
-                        <div class="inputText">
-                            <input class="login" type="password" onChange={e => setSenha(e.target.value)}/>
-                        </div>
-                    </label>
-                    <div class="inputText">
-                        <input class="submitButton" type="submit"/>
+            <div class="backgroundHeader">
+                <div class="header-adocao row">
+                    <div class="col-2">
+                        <img class="headerLogo col-10 col-xxl-3 col-xl-3 col-lg-3 col-md-5" src={templogo}/>
                     </div>
-                </form>
+                    <div class="col-5 joao">
+                        <p class="cadastro">Novo por aqui? <a href={cadastroUrl} class="cadastroClick">Cadastre-se</a> já!</p>
+                    </div>
+                    <div class="col-12 col-xxl-5 col-xl-5 col-lg-4 col-md-4 jorge">
+                        <form onSubmit={Login}>
+                            <div class="switchBar col-12">
+                                <p class="d-none d-xl-block col-1 switchP">Adotante</p>
+                                <p class="d-block d-xl-none switchP">Adotante</p>
+                                <Switch name="switchLogin" checked={tutor} onChange={e => setTutor(e.target.checked)} defaultChecked color="default"/>
+                                <p class=" d-none d-lg-block col-1 switchP" id="switchBarRight">Tutor</p>
+                                <p class="d-block d-lg-none switchP">Tutor</p>
+                                <label>
+                                    <div class="inputText">
+                                        <input class="login" type="text" name="name" onChange={e => setNome(e.target.value)}/>
+                                    </div>
+                                    <div class="inputText">
+                                        <input class="login" type="password" onChange={e => setSenha(e.target.value)}/>
+                                    </div>
+                                </label>
+                                <div class="inputButton">
+                                    <input class="submitButton d-block col-11" type="submit"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <p class="cadastro">Novo por aqui? <span class="cadastroClick">Cadastre-se</span> já!</p>
-        </div>
     );
 
 }

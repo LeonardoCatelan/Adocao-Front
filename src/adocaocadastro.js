@@ -64,74 +64,69 @@ function Adocaocadastro() {
     return(
         <>
             <Adocaoheader/>
-            <img class="logocadastro" src={logotemp}/>
-            <form class="cadastro-forms" onSubmit={Cadastrar}>
-                <div class="cadastro-box">
-                    <p class="cadastrochecktext">Adotante</p>
-                    <input type="radio" class="cadastrocheckbox" name="tipocadastro" checked/>
-                    <p class="cadastrochecktext">Tutor</p>        
-                    <input type="radio" class="cadastrocheckbox" name="tipocadastro" disabled/>
+            <div class="row">
+                <div class="col-2 offset-5 jorge1">
+                    <img class="logocadastro" src={logotemp}/>
                 </div>
-                <form>
-                    <div class="inputtext">
-                        <p>Usuario:</p>
-                        <p>Nome:</p>
-                        <p>Idade:</p>
-                        <p>Celular:</p>
-                        <p>CEP:</p>
-                        <p>Animal:</p>	
-                        <p>Genero:</p>
-                        <p>Raça</p>
-                    </div> 
-                    <div class="inputfielddiv">
-                        <input class="inputfields" type="text" onChange={e => setUsuarioCadastro(e.target.value)}/>
-                        <input class="inputfields" type="text" onChange={e => setNomeCadastro(e.target.value)}/>
-                        <input class="inputfields" type="number" onChange={e => setIdadeCadastro(e.target.value)}/>
-                        <input class="inputfields" type="number" onChange={e => setCelularCadastro(e.target.value)}/>
-                        <input class="inputfields" type="number" onChange={e => setCepCadastro(e.target.value)}/>
-                        <select class="inputfields" onChange={e => setAnimalCadastro(e.target.value)}>
-                            <option value="Cachorro">Cachorro</option>
-                            <option value="Gato">Gato</option>
-                        </select>
-                        <select class="inputfields" type="text" onChange={e => setGeneroCadastro(e.target.value)}>
-                        <option value="M">Macho</option>
-                        <option value="F">Femea</option>
-                        </select>
-                        <input disabled class="inputfields" type="text" onChange={e => setRacaCadastro(e.target.value)}/>
+            </div>
+            <div class="container backgroundContainer">
+                <form class="cadastro-forms" onSubmit={Cadastrar}>
+                    <div class="col-8 offset-2 backgroundCadastro">
+                        <div class="cadastro-box col-10 offset-4">
+                            <p class="cadastrochecktext">Adotante</p>
+                            <input type="radio" class="cadastrocheckbox" name="tipocadastro" checked/>
+                            <p class="cadastrochecktext">Tutor</p>        
+                            <input type="radio" class="cadastrocheckbox" name="tipocadastro" disabled/>
+                        </div>
                     </div>
-                    <div class="inputtextright">
-                        <p>Senha:</p>
-                        <p>Sobrenome:</p>
-                        <p>Email:</p>
-                        <p>Estado:</p>
-                        <p>Cidade:</p>
-                        <p>Porte:</p>
-                        <p>Vacinas</p>
-                        <p>Cor</p>
+                    <div class="col-8 offset-2 backgroundCadastro">
+                        <div class="row">
+                            <div class="col-xxl-5 col-lg-12 offset-2">
+                                <input class="inputfields" type="text" name="usuarioCadastro" onChange={e => setUsuarioCadastro(e.target.value)} placeholder="Usuario"/>
+                                <input class="inputfields" type="text" onChange={e => setNomeCadastro(e.target.value)} placeholder="Nome"/>
+                                <input class="inputfields" type="number" onChange={e => setIdadeCadastro(e.target.value)} placeholder="Idade"/>
+                                <input class="inputfields" type="number" onChange={e => setCelularCadastro(e.target.value)} placeholder="Celular"/>
+                                <input class="inputfields" type="number" onChange={e => setCepCadastro(e.target.value)} placeholder="CEP"/>
+                                <select class="inputfields" onChange={e => setAnimalCadastro(e.target.value)}>
+                                    <option value="" disabled selected hidden>Tipo de Pet</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                </select>
+                                <select class="inputfields" type="text" onChange={e => setGeneroCadastro(e.target.value)}>
+                                    <option value="" disabled selected hidden>Gênero</option>
+                                    <option value="M">Macho</option>
+                                    <option value="F">Femea</option>
+                                </select>
+                                <input disabled class="inputfields" type="text" onChange={e => setRacaCadastro(e.target.value)} placeholder="Raça do Pet"/>
+                                <input disabled class="inputimg" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
+                            </div>
+                            <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                                <input class="inputfields" type="password" onChange={e => setSenhaCadastro(e.target.value)} placeholder="Senha"/>
+                                <input class="inputfields" type="text" onChange={e => setSobrenomeCadastro(e.target.value)} placeholder="Sobrenome"/>
+                                <input class="inputfields" type="email" onChange={e => setEmailCadastro(e.target.value)} placeholder="E-Mail"/>
+                                <select class="inputfields" onChange={e => setEstadoCadastro(e.target.value)}>
+                                    <option value="" disabled selected hidden>Estado</option>
+                                    <option value="RS">RS</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                </select>
+                                <input class="inputfields" type="text" onChange={e => setCidadeCadastro(e.target.value)} placeholder="Cidade"/>
+                                <select class="inputfields" onChange={e => setPorteCadastro(e.target.value)}>
+                                    <option value="" disabled selected hidden>Porte</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Medio">Medio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                                <input disabled class="inputfields" type="text" onChange={e => setVacinasCadastro(e.target.value)} placeholder="Vacinas"/>
+                                <input disabled class="inputfields" type="text" onChange={e => setCorCadastro(e.target.value)} placeholder="Cor"/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="inputfielddivright">
-                        <input class="inputfields" type="password" onChange={e => setSenhaCadastro(e.target.value)}/>
-                        <input class="inputfields" type="text" onChange={e => setSobrenomeCadastro(e.target.value)}/>
-                        <input class="inputfields" type="email" onChange={e => setEmailCadastro(e.target.value)}/>
-                        <select class="inputfields" onChange={e => setEstadoCadastro(e.target.value)}>
-                            <option value="RS">RS</option>
-                            <option value="SC">SC</option>
-                            <option value="SP">SP</option>
-                        </select>
-                        <input class="inputfields" type="text" onChange={e => setCidadeCadastro(e.target.value)}/>
-                        <select class="inputfields" onChange={e => setPorteCadastro(e.target.value)}>
-                            <option value="Pequeno">Pequeno</option>
-                            <option value="Medio">Medio</option>
-                            <option value="Grande">Grande</option>
-                        </select>
-                        <input disabled class="inputfields" type="text" onChange={e => setVacinasCadastro(e.target.value)}/>
-                        <input disabled class="inputfields" type="text" onChange={e => setCorCadastro(e.target.value)}/>
+                    <div class="col-8 offset-2 backgroundCadastro">
+                        <input class="enviarcadastro" type="submit"/>
                     </div>
                 </form>
-                <p class="inputtext">Foto</p>
-                <input disabled class="inputimg" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
-                <input class="enviarcadastro" type="submit"/>
-            </form>    
+            </div>
         </>
     );
 
