@@ -38,11 +38,6 @@
     margin-left: 5px;
 }
 
-.inputfielddiv{
-    margin-left: 5px;
-    display: inline-block;
-}
-
 .inputfields{
     display: block;
     margin-bottom:4%;
@@ -52,4 +47,14 @@
     display: block;
     margin: 0 auto 0 auto;
     padding: 0.5%;
+}
+
+@media (max-width: 1394px) {
+    .cadastroRight{
+        margin-top: 1%;
+        margin-left: 16.7%;
+    }
+    .inputfieldsphone{
+        margin-top: 5%;
+    }
 }

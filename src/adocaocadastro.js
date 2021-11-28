@@ -100,25 +100,25 @@ function Adocaocadastro() {
                                 <input disabled class="inputfields" type="text" onChange={e => setRacaCadastro(e.target.value)} placeholder="Raça do Pet"/>
                                 <input disabled class="inputimg" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
                             </div>
-                            <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-                                <input class="inputfields" type="password" onChange={e => setSenhaCadastro(e.target.value)} placeholder="Senha"/>
-                                <input class="inputfields" type="text" onChange={e => setSobrenomeCadastro(e.target.value)} placeholder="Sobrenome"/>
-                                <input class="inputfields" type="email" onChange={e => setEmailCadastro(e.target.value)} placeholder="E-Mail"/>
-                                <select class="inputfields" onChange={e => setEstadoCadastro(e.target.value)}>
+                            <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4 cadastroRight">
+                                <input class="inputfields inputfieldsphone" type="password" onChange={e => setSenhaCadastro(e.target.value)} placeholder="Senha"/>
+                                <input class="inputfields inputfieldsphone" type="text" onChange={e => setSobrenomeCadastro(e.target.value)} placeholder="Sobrenome"/>
+                                <input class="inputfields inputfieldsphone" type="email" onChange={e => setEmailCadastro(e.target.value)} placeholder="E-Mail"/>
+                                <select class="inputfields inputfieldsphone" onChange={e => setEstadoCadastro(e.target.value)}>
                                     <option value="" disabled selected hidden>Estado</option>
                                     <option value="RS">RS</option>
                                     <option value="SC">SC</option>
                                     <option value="SP">SP</option>
                                 </select>
-                                <input class="inputfields" type="text" onChange={e => setCidadeCadastro(e.target.value)} placeholder="Cidade"/>
-                                <select class="inputfields" onChange={e => setPorteCadastro(e.target.value)}>
+                                <input class="inputfields inputfieldsphone" type="text" onChange={e => setCidadeCadastro(e.target.value)} placeholder="Cidade"/>
+                                <select class="inputfields inputfieldsphone" onChange={e => setPorteCadastro(e.target.value)}>
                                     <option value="" disabled selected hidden>Porte</option>
                                     <option value="Pequeno">Pequeno</option>
                                     <option value="Medio">Medio</option>
                                     <option value="Grande">Grande</option>
                                 </select>
-                                <input disabled class="inputfields" type="text" onChange={e => setVacinasCadastro(e.target.value)} placeholder="Vacinas"/>
-                                <input disabled class="inputfields" type="text" onChange={e => setCorCadastro(e.target.value)} placeholder="Cor"/>
+                                <input disabled class="inputfields inputfieldsphone" type="text" onChange={e => setVacinasCadastro(e.target.value)} placeholder="Vacinas"/>
+                                <input disabled class="inputfields inputfieldsphone" type="text" onChange={e => setCorCadastro(e.target.value)} placeholder="Cor"/>
                             </div>
                         </div>
                     </div>
