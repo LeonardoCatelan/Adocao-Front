@@ -17,6 +17,12 @@ const [tutor, setTutor] = useState(false)
 const [nome, setNome] = useState("")
 const [senha, setSenha] = useState("")
 
+function gravarId(id){
+    sessionStorage.setItem("id", id);
+    console.log(sessionStorage.getItem("id"));
+}
+
+
 async function Login(e){
 
     e.preventDefault();
@@ -32,7 +38,7 @@ async function Login(e){
         
         const response = await Autenticar(url, data);
         if(response.status == 200){
-            alert(response.data)
+            gravarId(response.data);
         }else{
             alert("Usuário ou senha incorretos");
         }
@@ -42,7 +48,8 @@ async function Login(e){
         
         const response = await Autenticar(url, data);
         if(response.status == 200){
-            alert(response.data)
+            gravarId(response.data);
+            alert(response.data); //fazer o redirect depois que tudo tiver ggwp
         }else{
             alert("Usuário ou senha incorretos");
         }
@@ -75,14 +82,14 @@ function Autenticar(url, data){
                                 <p class="d-block d-lg-none switchP">Tutor</p>
                                 <label>
                                     <div class="inputText">
-                                        <input class="login" type="text" name="name" onChange={e => setNome(e.target.value)}/>
+                                        <input class="login" type="text" name="name" onChange={e => setNome(e.target.value)}  placeholder="Usuario"/>
                                     </div>
                                     <div class="inputText">
-                                        <input class="login" type="password" onChange={e => setSenha(e.target.value)}/>
+                                        <input class="login" type="password" onChange={e => setSenha(e.target.value)}  placeholder="Senha"/>
                                     </div>
                                 </label>
                                 <div class="inputButton">
-                                    <input class="submitButton d-block col-11" type="submit"/>
+                                    <input class="submitButton d-block col-11" type="submit" value="Entrar"/>
                                 </div>
                             </div>
                         </form>

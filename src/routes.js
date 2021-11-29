@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import adocaopericles from './adocaopericles';
 import adocaoindex from './adocaoindex';
 import adocaocadastro from './adocaocadastro';
-import adocaoadotante from './adocaoadotante';
 import adocaousuario from './adocaousuario';
 
 /*
@@ -27,7 +26,6 @@ const Routes = () => (
             <Route path='/pericles' component={adocaopericles} />
             <Route path='/index' component={adocaoindex} />
             <Route path='/cadastro' component={adocaocadastro} />
-            <Route path='/adotante' component={adocaoadotante} />
             <Route path='/usuario' component={adocaousuario} />
         </Switch>
     </BrowserRouter>);

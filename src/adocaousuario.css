@@ -1,0 +1,71 @@
+.imageDog{
+    height: 70%;
+    margin-top: 1%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.textoCard{
+    margin-top: 1%;
+    margin-left: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+.botaorequest{
+    position: relative
+}
+
+.botoeslikedislike{
+    margin-top: 3px;
+    margin-left: 40%;
+}
+
+.botaodislike{
+    display: inline-block;
+    align-items: center;
+    margin: auto auto;
+    width: 10%;
+    height: 50px;
+}
+
+.botaohover:hover{
+    cursor: pointer;
+}
+
+.botaolike{
+    display: inline-block;
+    margin-left: 10%;
+    width: 12%;
+}
+
+.botaolike img{
+    width: 100%;
+    height: auto;
+    filter: invert(75%) sepia(14%) saturate(766%) hue-rotate(303deg) brightness(106%) contrast(103%);
+}
+
+.botaodislike img{
+    width: 100%;
+    height: auto;
+    filter: invert(21%) sepia(72%) saturate(7447%) hue-rotate(359deg) brightness(90%) contrast(128%);
+}
+
+@media screen and (max-width: 1024px) {
+    .lowres{
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lowres{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .lowres{
+        margin-top: 40%;
+        margin-left: 30%;
+    }
+}

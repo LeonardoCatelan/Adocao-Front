@@ -81,13 +81,13 @@ function Adocaocadastro() {
                     </div>
                     <div class="col-8 offset-2 backgroundCadastro">
                         <div class="row">
-                            <div class="col-xxl-5 col-lg-12 offset-2">
+                            <div class="col-xxl-5 col-lg-12 offset-2 ">
                                 <input class="inputfields" type="text" name="usuarioCadastro" onChange={e => setUsuarioCadastro(e.target.value)} placeholder="Usuario"/>
                                 <input class="inputfields" type="text" onChange={e => setNomeCadastro(e.target.value)} placeholder="Nome"/>
                                 <input class="inputfields" type="number" onChange={e => setIdadeCadastro(e.target.value)} placeholder="Idade"/>
                                 <input class="inputfields" type="number" onChange={e => setCelularCadastro(e.target.value)} placeholder="Celular"/>
                                 <input class="inputfields" type="number" onChange={e => setCepCadastro(e.target.value)} placeholder="CEP"/>
-                                <select class="inputfields" onChange={e => setAnimalCadastro(e.target.value)}>
+                                <select class="inputfields inputdropdown" onChange={e => setAnimalCadastro(e.target.value)}>
                                     <option value="" disabled selected hidden>Tipo de Pet</option>
                                     <option value="Cachorro">Cachorro</option>
                                     <option value="Gato">Gato</option>
@@ -100,18 +100,18 @@ function Adocaocadastro() {
                                 <input disabled class="inputfields" type="text" onChange={e => setRacaCadastro(e.target.value)} placeholder="Raça do Pet"/>
                                 <input disabled class="inputimg" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
                             </div>
-                            <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4 cadastroRight">
+                            <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-5 cadastroRight">
                                 <input class="inputfields inputfieldsphone" type="password" onChange={e => setSenhaCadastro(e.target.value)} placeholder="Senha"/>
                                 <input class="inputfields inputfieldsphone" type="text" onChange={e => setSobrenomeCadastro(e.target.value)} placeholder="Sobrenome"/>
                                 <input class="inputfields inputfieldsphone" type="email" onChange={e => setEmailCadastro(e.target.value)} placeholder="E-Mail"/>
-                                <select class="inputfields inputfieldsphone" onChange={e => setEstadoCadastro(e.target.value)}>
+                                <select class="inputfields inputfieldsphone inputdropdown" onChange={e => setEstadoCadastro(e.target.value)}>
                                     <option value="" disabled selected hidden>Estado</option>
                                     <option value="RS">RS</option>
                                     <option value="SC">SC</option>
                                     <option value="SP">SP</option>
                                 </select>
                                 <input class="inputfields inputfieldsphone" type="text" onChange={e => setCidadeCadastro(e.target.value)} placeholder="Cidade"/>
-                                <select class="inputfields inputfieldsphone" onChange={e => setPorteCadastro(e.target.value)}>
+                                <select class="inputfields inputfieldsphone inputdropdown" onChange={e => setPorteCadastro(e.target.value)}>
                                     <option value="" disabled selected hidden>Porte</option>
                                     <option value="Pequeno">Pequeno</option>
                                     <option value="Medio">Medio</option>

@@ -20,6 +20,9 @@
     margin-left: 1%;
 }
 
+.inputdropdown{
+    padding-bottom: 6px;
+}
 
 .cadastrochecktext{
     font-family: Roboto;
@@ -49,7 +52,7 @@
     padding: 0.5%;
 }
 
-@media (max-width: 1394px) {
+@media (max-width: 1200px) {
     .cadastroRight{
         margin-top: 1%;
         margin-left: 16.7%;
