@@ -5,6 +5,7 @@ import Switch from '@mui/material/Switch'
 import { useState } from 'react';
 import axios from 'axios';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { useHistory } from "react-router-dom";
 
 
 
@@ -16,6 +17,8 @@ const [tutor, setTutor] = useState(false)
 
 const [nome, setNome] = useState("")
 const [senha, setSenha] = useState("")
+
+let history = useHistory()
 
 function gravarId(id){
     sessionStorage.setItem("id", id);
@@ -39,6 +42,7 @@ async function Login(e){
         const response = await Autenticar(url, data);
         if(response.status == 200){
             gravarId(response.data);
+            //history.push("/usuario");
         }else{
             alert("Usuário ou senha incorretos");
         }
@@ -49,7 +53,7 @@ async function Login(e){
         const response = await Autenticar(url, data);
         if(response.status == 200){
             gravarId(response.data);
-            alert(response.data); //fazer o redirect depois que tudo tiver ggwp
+            history.push("/usuario");
         }else{
             alert("Usuário ou senha incorretos");
         }

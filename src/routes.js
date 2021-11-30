@@ -5,28 +5,37 @@ import adocaoindex from './adocaoindex';
 import adocaocadastro from './adocaocadastro';
 import adocaousuario from './adocaousuario';
 
-/*
-const PrivateRoute = ({ component: Component, levelRequired: levelRequired, ...rest }) => 
+
+const PrivateRoute = ({ component: Component, ...rest }) => 
 (
 
     <Route {...rest} render={props => (
          
-        localAuthentication(levelRequired) ?
+        verificarId() ?
             (<Component {...props} />)
             :
-            (<Redirect to="/" />)
+            (<Redirect to="/index" />)
     )}
 
     />
 );
-*/
+
+
+function verificarId(){
+    var temId = false;
+    if(sessionStorage.getItem("id")){
+        temId = true;
+    }
+    return temId;
+}
+
 const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route path='/pericles' component={adocaopericles} />
             <Route path='/index' component={adocaoindex} />
             <Route path='/cadastro' component={adocaocadastro} />
-            <Route path='/usuario' component={adocaousuario} />
+            <PrivateRoute path='/usuario' component={adocaousuario} />
         </Switch>
     </BrowserRouter>);
 

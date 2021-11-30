@@ -5,13 +5,17 @@ import Switch from '@mui/material/Switch'
 import { useState } from 'react';
 import axios from 'axios';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { useHistory } from "react-router-dom";
 
 
 
 function AdocaoheaderLogado() {
+    
+    let history = useHistory()
 
-    function sabao(){
-        alert("cracra");
+    function deslogar(){
+        sessionStorage.clear();
+        history.push("/index");
     }
 
     return(
@@ -21,7 +25,7 @@ function AdocaoheaderLogado() {
                         <img class="headerLogo col-8 col-xxl-3 col-xl-3 col-lg-3 col-md-5" src={templogo}/>
                     </div>
                     <div class="col-3 col-xxl-2 offset-8 col-xl-5 col-lg-5 col-md-5">
-                        <p class="textodeslogar headerhover" onClick={sabao}>Deslogar</p>
+                        <p class="textodeslogar headerhover" onClick={deslogar}>Deslogar</p>
                     </div>
                 </div>
             </div>
