@@ -97,8 +97,12 @@ function Adocaousuario() {
             console.log(resposta);
             setRetorno(resposta.data);
             setPet(retorno[0]);
+
             var div = document.getElementById('caixa');
             div.classList.remove('escondido')
+
+            var divBotao = document.getElementById('botaopesquisa');
+            divBotao.classList.remove('caixaescondida');
         }
           
     }
@@ -189,7 +193,7 @@ function Adocaousuario() {
             </Fade>
         </Modal>
         </div>
-            <div class="row botaorequest">
+            <div class="row botaorequest caixaescondida" id="botaopesquisa">
                 <div class="col-3 offset-5">
                     <form class="usuario-forms" onSubmit={MandarRequest}>
                         <label class="col-3" for="quilometros">Distancia:</label>

@@ -80,3 +80,9 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.caixaescondida{
+    padding-top: 5%;
+    margin: auto;
+    width: 70%;
+}
