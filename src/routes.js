@@ -33,7 +33,7 @@ const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route path='/pericles' component={adocaopericles} />
-            <Route path='/index' component={adocaoindex} />
+            <Route exact path='/' component={adocaoindex} />
             <Route path='/cadastro' component={adocaocadastro} />
             <PrivateRoute path='/usuario' component={adocaousuario} />
         </Switch>

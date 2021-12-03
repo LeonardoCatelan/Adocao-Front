@@ -10,7 +10,7 @@ var state = {
 
 return(
     <div id="content-logo">
-        <h2 onClick = {() => alert(state.robson)} >Parabens, você descobriu o maior segredo do projeto, aproveite.</h2>
+        <h2 onClick = {() => alert(state.robson)} >:D</h2>
     <ReactPlayer url='https://www.youtube.com/watch?v=saalFn025fU' />
     </div>
 );

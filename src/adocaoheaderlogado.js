@@ -15,7 +15,7 @@ function AdocaoheaderLogado() {
 
     function deslogar(){
         sessionStorage.clear();
-        history.push("/index");
+        history.push("/");
     }
 
     return(
