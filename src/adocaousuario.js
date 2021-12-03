@@ -12,6 +12,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import { useHistory } from "react-router-dom";
+import connect from "./config.js"
 
 function Adocaousuario() {
 
@@ -88,7 +89,7 @@ function Adocaousuario() {
         setI(0);
         var id = lerId();
 
-        var url = "http://localhost:12439/api/DataAccess/BuscarPet?Id=" + id + "&distanciaMaxima=" + quilometros;
+        var url = `${connect}/api/DataAccess/BuscarPet?Id=" + id + "&distanciaMaxima=" + quilometros;`
 
         const resposta = await EnviarRequisicao(url);
         if(resposta.length == 1){

@@ -4,7 +4,7 @@ import './adocaocadastro.css';
 import logotemp from './img/templogo.png'
 import { useState } from 'react';
 import axios from 'axios';
-import { Alert } from '@mui/material';
+import connect from "./config.js"
 
 function Adocaocadastro() {
 
@@ -32,7 +32,8 @@ function Adocaocadastro() {
 
         e.preventDefault();
         
-        var url = "http://localhost:12439/api/DataAccess/CadastroAdotante";
+        //var url = "http://localhost:12439/api/DataAccess/CadastroAdotante";
+        var url = `${connect}/api/DataAccess/CadastroAdotante`;
         var data = {
             "Usuario" : usuarioCadastro,
             "Senha" : senhaCadastro,

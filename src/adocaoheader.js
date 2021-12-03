@@ -6,12 +6,14 @@ import { useState } from 'react';
 import axios from 'axios';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from "react-router-dom";
+import connect from "./config.js"
+
 
 
 
 function Adocaoheader() {
 
-const cadastroUrl = "http://localhost:3000/cadastro"
+const cadastroUrl = `${connect}/cadastro`
 
 const [tutor, setTutor] = useState(false)
 
@@ -37,7 +39,8 @@ async function Login(e){
     };
     var url = "";
     if(tutor){
-        url = "http://localhost:12439/api/DataAccess/LoginTutor";
+        url = `${connect}/api/DataAccess/LoginTutor`;
+        //url = "http://localhost:12439/api/DataAccess/LoginTutor";
         
         const response = await Autenticar(url, data);
         if(response.status == 200){
@@ -48,7 +51,8 @@ async function Login(e){
         }
 
     }else{
-        url = "http://localhost:12439/api/DataAccess/LoginAdotante";
+        url = `${connect}/api/DataAccess/LoginTutor`;
+        //url = "http://localhost:12439/api/DataAccess/LoginAdotante";
         
         const response = await Autenticar(url, data);
         if(response.status == 200){
