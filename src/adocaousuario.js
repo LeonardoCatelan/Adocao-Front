@@ -89,10 +89,11 @@ function Adocaousuario() {
         setI(0);
         var id = lerId();
 
-        var url = `${connect}/api/DataAccess/BuscarPet?Id=" + id + "&distanciaMaxima=" + quilometros;`
-
+        var url = `${connect}/api/DataAccess/BuscarPet?Id=${id}&distanciaMaxima=${quilometros}`;
+        
         const resposta = await EnviarRequisicao(url);
-        if(resposta.length == 1){
+        console.log(resposta);
+        if(resposta.data[0].mensagemErro != null){
             alert("Não foram encontrados pets, aumente a distância e tente novamente");
         }else{
             console.log(resposta);
@@ -198,7 +199,7 @@ function Adocaousuario() {
                 <div class="col-3 offset-5">
                     <form class="usuario-forms" onSubmit={MandarRequest}>
                         <label class="col-3" for="quilometros">Distancia:</label>
-                        <input type="number" class="inputfields col-3" id="quilometros" name="quilometros" onChange={e => setQuilometros(e.target.value)} placeholder="km"/>
+                        <input type="number" class="inputfields col-12 col-md-3" id="quilometros" name="quilometros" onChange={e => setQuilometros(e.target.value)} placeholder="km"/>
                         <input type="submit"/>
                     </form>
                 </div>

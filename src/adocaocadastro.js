@@ -52,8 +52,10 @@ function Adocaocadastro() {
         const responseData = await EnviarDados(url, data);
         if(responseData == 200){
             alert("Cadastro realizado com sucesso, você já pode logar.");
+            window.location.reload();
         }else{
             alert("Falha no cadastro, verifique os campos e tente novamente");
+            window.location.reload();
         }
     }
 

@@ -13,7 +13,7 @@ import connect from "./config.js"
 
 function Adocaoheader() {
 
-const cadastroUrl = `${connect}/cadastro`
+const cadastroUrl = "http://142.4.193.144/cadastro";
 
 const [tutor, setTutor] = useState(false)
 
@@ -51,7 +51,7 @@ async function Login(e){
         }
 
     }else{
-        url = `${connect}/api/DataAccess/LoginTutor`;
+        url = `${connect}/api/DataAccess/LoginAdotante`;
         //url = "http://localhost:12439/api/DataAccess/LoginAdotante";
         
         const response = await Autenticar(url, data);

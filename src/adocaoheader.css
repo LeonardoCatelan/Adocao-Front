@@ -2,10 +2,6 @@
   background-color: #f1f1f1;
 }
 
-.headerLogo{
-  height: 80%;
-}
-
 .header-adocao {
     overflow: hidden;
     background-color: #f1f1f1;
@@ -13,10 +9,8 @@
   }
 
 .headerLogo{
-  width: 3.5%;
   margin-left: 10%;
 }
-
 
   .cadastro{
     text-align: right;

@@ -14,7 +14,7 @@ const PrivateRoute = ({ component: Component, ...rest }) =>
         verificarId() ?
             (<Component {...props} />)
             :
-            (<Redirect to="/index" />)
+            (<Redirect to="/" />)
     )}
 
     />
