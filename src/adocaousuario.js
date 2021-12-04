@@ -120,7 +120,7 @@ function Adocaousuario() {
             <div class="escondido" id="caixa">
                     <div class="container">
                         <div class="row">
-                            <div class="col-6 offset-3 imagePet caixote">
+                            <div class="col-10 col-xl-6 offset-3 offset-md-1 offset-xl-3 imagePet caixote">
                                 <img class="imageDog col-12" src={retorno[i].retornoPet.img}/>
                                 <div class="row">
                                     <div class="col-sm">
@@ -156,8 +156,8 @@ function Adocaousuario() {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="botoeslikedislike col-12 col-sm-8 col-md-6 lowres">
+                    <div class="row caixabotoes">
+                        <div class="botoeslikedislike col-12 col-sm-8 col-md-6 offset-2 offset-sm-0 lowres">
                             <div class="botaodislike botaohover">
                                 <img src={dislike} onClick={dislaike}/>
                             </div>

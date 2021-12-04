@@ -54,10 +54,10 @@
 
 @media (max-width: 1200px) {
     .cadastroRight{
-        margin-top: 1%;
+        margin-top: 0%;
         margin-left: 16.7%;
     }
-    .inputfieldsphone{
-        margin-top: 5%;
+    .inputfields{
+        margin-bottom: 1%;
     }
 }

@@ -53,7 +53,7 @@
 
 @media screen and (max-width: 1024px) {
     .lowres{
-        margin-top: 50%;
+        margin-top: 2%;
     }
 }
 
@@ -61,12 +61,48 @@
     .lowres{
         margin-top: 10%;
     }
+    .caixote{
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .caixote{
+        padding-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .caixote{
+        padding-bottom: 25%;
+    }
+    .caixabotoes{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .caixote{
+        padding-bottom: 33%;
+    }
+    .caixabotoes{
+        margin-top: -30%;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .lowres{
         margin-top: 40%;
         margin-left: 30%;
+    }
+    .caixote{
+        padding-bottom: 40%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .caixote{
+        padding-bottom: 50%;
     }
 }
 
